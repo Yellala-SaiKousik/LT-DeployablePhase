@@ -1,0 +1,112 @@
+/* General styles */
+.studentList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Centering the table */
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/bg/21.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Table header styles */
+th {
+    background-color: #46166b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Table cell styles */
+td {
+    padding: 20px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Badge styles for even rows */
+tr:nth-child(even) .badge,
+tr:nth-child(even) .badge i {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+/* Badge styles for odd rows */
+tr:nth-child(odd) .badge,
+tr:nth-child(odd) .badge i {
+    background-color: transparent;
+    color: white;
+}
+
+/* Player number column width */
+.player-number {
+    width: 10%;
+}
+
+/* Player name column width */
+.player-name {
+    width: 40%;
+}
+
+/* Dropdown styles */
+select {
+    padding: 12px 10px; /* Adjusted padding */
+    font-size: 18px; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #eeb211; /* Highlighting the dropdown */
+    color: #fff;
+}
+/* Button styles */
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #eeb211;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #ffca28;
+}
+
+/* Filters container styles */
+.filters {
+    margin: 20px;
+    padding-bottom: 10px;
+}
+
+/* Heading styles */
+h5 {
+    margin: 20px;
+    font-size: 1.9em;
+    letter-spacing: 0.1em;
+    font-family: poppins;
+    font-weight: bolder;
+    color: white;
+}

@@ -1,0 +1,91 @@
+<div class="professorHomeContainer">
+    <main>
+        <section class="head-container">
+            Dashboard
+        </section>
+        <section class="greeting-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="hellomessage">Hello, Professor</h2>
+
+                    <p class="welcomemessage">
+                        The academic world is eager for your insights and contributions.</p>
+
+
+                </div>
+            </div>
+        </section>
+        <section class="cards">
+            <div class="cards-container">
+                <div class="card" [style.backgroundColor]="card.color" *ngFor="let card of cards">
+                    <img src="{{ card.icon }}" alt="{{ card.title }}">
+                    <div class="content">
+                        <h3 class="number">{{ card.number }}</h3>
+                        <h3 class="title">{{ card.title }}</h3>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Courses Container -->
+                <div class="col-md-6">
+                    <section class="courses-container">
+                        <h2 class="my-courses-title">My Courses</h2>
+                        <div class="search-courses">
+                            <input type="text" placeholder="Search courses" class="search-course-input">
+                            <button class="btn btn-primary search-course-btn">Search</button>
+                        </div>
+                        <hr>
+                        <table class="courses-table">
+                            <tr>
+                                <th>Course Name
+                                </th>
+                                <th>Course Code</th>
+                            </tr>
+                            <tr *ngFor="let course of professorCourses; let i = index">
+                                <td>{{ course.courseName }} </td>
+                                <td>{{ course.courseCode }}</td>
+                              
+                            </tr>
+                        </table>
+                    </section>
+                    
+        </div>
+        <div class="col-md-6">
+            <section class="schedule-container">
+                <h2 class="my-schedule-title">My Class Schedule</h2>
+                <table>
+                  <tr>
+                    <th>Course</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                  </tr>
+                  <tr *ngFor="let course of courseswithSchedules">
+                    <td>{{ course.courseName }}</td>
+                    <td *ngFor="let day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']">
+                      <ul class="no-bullets">
+                        <li *ngFor="let session of course.weekSchedule[day]">
+                         {{ session.timeRange }}
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
+              </section>
+              
+              
+              
+        </div>
+        </div>
+        </div>
+    </main>
+</div>
+
+
+

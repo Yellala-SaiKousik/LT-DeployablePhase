@@ -1,0 +1,178 @@
+body {
+    height: 100vh;
+    
+        background-image: url('/assets/bg/25.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; /* Reduce the size of the background image */
+    
+        
+
+  }
+
+  img{
+      width:50px;
+      height: 50px;
+  }
+  .btn-blink {
+    animation: blink 1s infinite alternate; /* Blinking animation */
+    transition: background-color 0.3s; /* Smooth color transition */
+  }
+  
+  /* Keyframes for blinking animation */
+  @keyframes blink {
+    from { background-color: #ffc107; } /* Yellow */
+    to { background-color: #673ab7; } /* Purple */
+  }
+.leaderboard {
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main-container{
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.checkprogress{
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background: linear-gradient(45deg, #e65947, #523fca);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.4em;
+    border: 1px solid white;
+    transition: background-color 0.3s;
+}
+
+td {
+    font-size: 1.3em;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: linear-gradient(45deg, #db6c6c, #5d5feb);
+}
+
+tr:nth-child(odd) {
+    background: linear-gradient(45deg, #86c096, #1b8579);
+}
+
+.badge {
+    background-color: #46166b;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.badge i {
+    margin-right: 5px;
+}
+
+/* Hover effects */
+th:hover {
+    background-color: #4c2163;
+}
+
+td:hover {
+    background-color: #dcdcdc;
+}
+
+.badge:hover {
+    background-color: #350e4a;
+}
+
+
+.player-number {
+    width: 10%;
+    padding-left: 20px;
+}
+
+
+.player-name {
+    width: 40%;
+}
+
+
+
+
+/* Style for the dropdowns */
+select {
+    padding: 15px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+
+
+}
+
+/* Style for the button */
+.main-container .btn  {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fffbfb;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  border-radius: 10px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 10px;
+    animation: blink 1s infinite alternate;
+  }
+  
+  .button-container .btn:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+.filters {
+    margin: 20px;
+}
+
+h5 {
+    margin: 20px;
+    font-size: 1.9em;
+    letter-spacing: 0.1em;
+    font-family: poppins;
+    font-weight: bolder;
+    color: white;
+}
+
+h1 {
+    background-color: #020202;
+    color: rgb(252, 250, 250);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }

@@ -1,0 +1,45 @@
+<div class="welcome-container">
+    <main>
+        <section class="intro">
+            <div class="text">
+                <h1>The App</h1>
+                <h1>that makes</h1>
+                <h1>reading fun!</h1>
+            </div>
+
+
+        </section>
+        <section class="feature-section">
+          <div class="cards-container">
+
+            <div class="card" *ngFor="let feature of features" 
+            (click)="feature.flipped = !feature.flipped"
+            [ngStyle]="{'--hover-color': feature.color}" 
+            [class.flipped]="feature.flipped">
+              <div [class]="feature.flipped ? 'card-inner flipped' : 'card-inner'">
+                <div class="card-front">
+                  <img [src]="feature.icon" [alt]="feature.title">
+                  <h3>{{ feature.title }}</h3>
+                </div>
+                <div class="card-back" [style.backgroundColor]="feature.color">
+                  <p>{{ feature.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            <div class="description-container">
+                <p>
+                    Introducing LearnTracker: Your Fun Companion for Learning Adventures!
+                    
+                    LearnTracker is your go-to app for adding a dash of excitement to your learning journey. It's like having a trusty sidekick cheering you on as you conquer new challenges and reach your goals.
+                    
+                    With LearnTracker, keeping track of your progress is a breeze. Set reminders to stay on top of your study sessions, jot down your thoughts in the journal feature, and personalize your learning experience to suit your style.
+                    
+                    Compete with friends on leaderboards, earn badges for your achievements, and turn learning into a fun-filled adventure.</p>
+            </div>
+          </section>
+        <!-- ... other sections ... -->
+    </main>
+    <!-- ... footer ... -->
+</div>

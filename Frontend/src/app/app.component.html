@@ -1,0 +1,9 @@
+
+   
+    <nav *ngIf="showNavbar">
+      <app-navbar></app-navbar>
+    </nav>
+    <div class="router-container">
+      <app-welcome></app-welcome>
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </div>
